@@ -18,14 +18,14 @@ class IndexModel {
    * 获取用户列表
    * @returns {Promise} 返回异步的处理结果
    * @example
-{
-  errcode: 0,
-  errmsg: '成功',
-  data: {
-    id: 1,
-    name: 'hello'
-  }
-}
+    {
+      errcode: 0,
+      errmsg: '成功',
+      data: {
+        id: 1,
+        name: 'hello'
+      }
+    }
    */
   getData () {
     return new Promise((resolve, reject) => {
@@ -38,7 +38,7 @@ class IndexModel {
             name: 'hello'
           }
         })
-      }, 3000)
+      }, 1000)
     })
   }
 }

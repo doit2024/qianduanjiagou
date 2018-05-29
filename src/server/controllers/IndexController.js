@@ -9,7 +9,7 @@ const IndexController = {
 
   getNameAction: async (ctx, next) => {
     const { id } = ctx.params
-    ctx.body = `hello getName ${id}`
+    ctx.body = await ctx.render('index', { id })
   }
 
 }

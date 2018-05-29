@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "cross-env NODE_ENV=development node ./dist/app.js",
-    "build:dev": "gulp",
+    "dev:watch": "gulp",
+    "dev:server": "cross-env NODE_ENV=development node ./dist/app.js",
+    "dev:client": "webpack --mode development",
+    "build:client": "webpack --mode production",
     "build:prod": "cross-env NODE_ENV=production gulp",
-    "build:apidoc": "jsdoc ./src/server/models/**/*.js -d ./apidoc"
+    "build:apidoc": "jsdoc ./src/server/models/*.js -d ./apidoc"
   },
   "repository": {
     "type": "git",
@@ -22,19 +23,48 @@
   },
   "homepage": "https://github.com/niuDazhuang/qianduanjiagou#readme",
   "devDependencies": {
+    "autoprefixer": "^8.5.1",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-html": "^4.0.3",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11",
+    "glob": "^7.1.2",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.1",
     "gulp-rollup": "^2.16.2",
     "gulp-sequence": "^1.0.0",
     "gulp-watch": "^5.0.0",
-    "rollup-plugin-replace": "^2.0.0"
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "postcss-loader": "^2.1.5",
+    "rollup-plugin-replace": "^2.0.0",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.10.0",
+    "webpack-cli": "^2.1.4",
+    "webpack-merge": "^4.1.2",
+    "yargs-parser": "^10.0.0"
   },
   "dependencies": {
     "cross-env": "^5.1.6",
     "jsdoc": "^3.5.5",
     "koa": "^2.5.1",
-    "koa-simple-router": "^0.2.0"
+    "koa-simple-router": "^0.2.0",
+    "koa-static": "^4.0.3",
+    "koa-swig": "^2.2.1",
+    "log4js": "^2.7.0"
   }
 }

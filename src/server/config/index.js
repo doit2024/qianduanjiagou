@@ -1,6 +1,9 @@
+const path = require('path')
+
 let config = {
   PORT: '3000',
-  VIEW_DIR: './view'
+  VIEW_DIR: path.join(__dirname, '..', 'views'),
+  STATIC_DIR: path.join(__dirname, '..', 'assets')
 }
 
 const development = {
