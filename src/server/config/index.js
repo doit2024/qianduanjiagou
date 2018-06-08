@@ -15,7 +15,7 @@ const production = {
 }
 
 if (process.env.NODE_ENV === 'development') {
-  config = Object.assign({}, config, development) 
+  config = Object.assign({}, config, development)
 }
 
 if (process.env.NODE_ENV === 'production') {

@@ -1,5 +1,8 @@
+body {
+  margin: 0;
+}
 .dt-header {
   height: 40px;
-  color: #fff;
-  background: #000
+  background: #fff;
+  box-shadow: 0 0 10px 3px #eee;
 }

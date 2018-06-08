@@ -1,7 +1,6 @@
 const errorHandler = {
   error (app, logger) {
     app.use(async (ctx, next) => {
-      console.log(ctx)
       try {
         await next()
       } catch (error) {
