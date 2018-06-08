@@ -11,14 +11,21 @@ const CLEANJS = './src/server/config/index.js'
 
 gulp.task('build:dev', () =>
   watch(SRC, {ignoreInitial: false}, () => gulp.src(SRC)
-    .pipe(babel({ babelrc: false }))
+    .pipe(babel({
+      babelrc: false,
+      plugins: [ 'transform-decorators-legacy' ]
+    }))
     .pipe(gulp.dest(DEST))
   )
 )
 
 gulp.task('build:prod', () => {
   gulp.src(SRC)
-  .pipe(babel({ babelrc: false, ignore: CLEANJS }))
+  .pipe(babel({
+    babelrc: false,
+    ignore: CLEANJS,
+    plugins: [ 'transform-decorators-legacy' ]
+  }))
   .pipe(gulp.dest(DEST))
 })
 
